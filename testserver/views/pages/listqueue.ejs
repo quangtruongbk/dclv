@@ -1,0 +1,16 @@
+<h1 class="display-4">Danh sách hàng đợi</h1>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Hàng đợi</th>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+        <% queue.forEach(function(queue){ %>
+            <tr>
+                <td><a href ='<%=queue.id%>'><%= queue.name %></a></td>
+            </tr>
+        <% }) %>
+    </tbody>
+</table>

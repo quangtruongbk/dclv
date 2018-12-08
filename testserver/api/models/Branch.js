@@ -1,5 +1,5 @@
 /**
- * Queuerequest.js
+ * Branch.js
  *
  * @description :: A model definition represents a database table/collection.
  * @docs        :: https://sailsjs.com/docs/concepts/models-and-orm/models
@@ -8,21 +8,19 @@
 module.exports = {
 
   attributes: {
-    //Quang Truong 3/12/2018 add
-    customName: {
+    //Quang Truong 8/12/2018 add
+    name: {
       type: 'string'
     },
-    customPhone: {
-      type: 'number'
-    }, 
-    customEmail: {
+    location: {
       type: 'string'
-    }, 
-    queue_id: {
+    },
+    capacity: {
       type: 'string'
-    } 
+    }
   },
-  datastore: 'dbsdclv' 
-  //Quang Truong 3/12/2018 end add
+  datastore: 'dbsdclv'
+  //Quang Truong 8/12/2018 end add
+
 };
 

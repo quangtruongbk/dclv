@@ -41,4 +41,14 @@ module.exports.routes = {
   //Quang Truong 7/12/2018 add
   'POST  /queuerequest/delete/:id': { controller: 'QueuerequestController', action: 'delete' },
   //Quang Truong 7/12/2018 end add
+
+  //Quang Truong 8/12/2018 add
+  'GET  /branch': { controller: 'BranchController', action: 'list' },
+  //Quang Truong 8/12/2018 end add
+
+  //Quang Truong 8/12/2018 add
+  'GET  /branch/:id': { controller: 'QueueController', action: 'list' },
+  'GET  /branch/:branch_id/:id': { controller: 'QueuerequestController', action: 'list' },
+  'GET  /branch/json': { controller: 'BranchController', action: 'listJson' },
+  //Quang Truong 8/12/2018 end add
 };
