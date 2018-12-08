@@ -8,15 +8,26 @@
 module.exports = {
 
     list:function(req, res){
-        var branchId = req.id;
-        Queue.find({branch_id : branchId}).exec(function(err, queue){
+        var branchId = req.params.id;
+        Queue.find({branchId : branchId}).exec(function(err, queue){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
-            res.view('pages/listqueue', {queue:queue});
+            console.log('check: '+req.params.id);
+            res.view('pages/listqueue', {queue:queue, branchID:branchId});
         });
     },
 
+    listJson:function(req, res){
+        var branchId = req.params.id;
+        Queue.find({branchId : branchId}).exec(function(err, queue){
+            if(err){
+                res.send(500, {error: 'Database Error'});
+            }
+            console.log('check: '+req.params.id);
+            res.json(queue);
+        });
+    },
 
 };
 

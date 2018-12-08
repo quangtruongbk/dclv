@@ -50,5 +50,7 @@ module.exports.routes = {
   'GET  /branch/:id': { controller: 'QueueController', action: 'list' },
   'GET  /branch/:branch_id/:id': { controller: 'QueuerequestController', action: 'list' },
   'GET  /branch/json': { controller: 'BranchController', action: 'listJson' },
+  'GET  /branch/:id/json': { controller: 'QueueController', action: 'listJson' },
+  'GET  /branch/:branch_id/:id/json': { controller: 'QueuerequestController', action: 'listJson' },
   //Quang Truong 8/12/2018 end add
 };

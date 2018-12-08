@@ -8,11 +8,22 @@
 module.exports = {
 
     list:function(req, res){
-        Queuerequest.find({}).exec(function(err, queuerequest){
+        var queueId=req.params.id;
+        Queuerequest.find({queueId:queueId}).exec(function(err, queuerequest){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }
             res.view('pages/list', {queuerequest:queuerequest});
+        });
+    },
+
+    listJson:function(req, res){
+        var queueId=req.params.id;
+        Queuerequest.find({queueId:queueId}).exec(function(err, queuerequest){
+            if(err){
+                res.send(500, {error: 'Database Error'});
+            }
+            res.json(queuerequest);
         });
     },
 
@@ -24,7 +35,7 @@ module.exports = {
         var customerphone = req.body.customerphone;
         var customeremail = req.body.customeremail;
 
-        Queuerequest.create({customName:customername, customPhone:customerphone, customEmail:customeremail}).exec(function(err){
+        Queuerequest.create({customerName:customername, customerPhone:customerphone, customerEmail:customeremail}).exec(function(err){
             if(err){
                 res.send(500, {error: 'Database Error'});
             }

@@ -12,13 +12,8 @@
         <% queuerequest.forEach(function(queuerequest){ %>
             <tr>
                 <td><%= queuerequest.id %></td>
-                <td><%= queuerequest.customName %></td>
-                <td><%= queuerequest.customPhone %></td>
-                <td>
-                <form class="d-inline" action="/queuerequest/delete/<%= queuerequest.id %>" method="POST">
-                    <input type="submit" value="Delete" class="btn btn-danger">
-                </form>
-            </td>
+                <td><%= queuerequest.customerName %></td>
+                <td><%= queuerequest.customerPhone %></td>
             </tr>
         <% }) %>
     </tbody>

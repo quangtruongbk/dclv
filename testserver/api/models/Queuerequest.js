@@ -9,16 +9,16 @@ module.exports = {
 
   attributes: {
     //Quang Truong 3/12/2018 add
-    customName: {
+    customerName: {
       type: 'string'
     },
-    customPhone: {
+    customerPhone: {
       type: 'number'
     }, 
-    customEmail: {
+    customerEmail: {
       type: 'string'
     }, 
-    queue_id: {
+    queueId: {
       type: 'string'
     } 
   },

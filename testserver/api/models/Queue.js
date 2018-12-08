@@ -14,7 +14,7 @@ module.exports = {
       type: 'string'
     },
   
-    branch_id: {
+    branchId: {
       type: 'string'
     }
   },
