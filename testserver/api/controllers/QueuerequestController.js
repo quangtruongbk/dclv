@@ -55,6 +55,15 @@ module.exports = {
 
         return false;
     },
-
+    cancelQueuerequest: function(req, res){
+        var queueId=req.params.id;
+        Queuerequest.update({queue_id:queueId},{state:'-1'}).exec(function(err){
+            if(err){
+                res.send(500, {error: 'Database Error'});
+            }
+            res.redirect('/');
+        });
+        return false;
+    },
 };
 
